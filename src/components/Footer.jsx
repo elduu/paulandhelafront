@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Compact Layout: Centered Couple Info + Links + Message */}
         <div className="footer__compact">
           <div className="couple__info">
-            <h3 className="couple__names">Paul & Hela</h3>
+            <h3 className="couple__names">Paul & Hella</h3>
             <p className="wedding__date">May 3rd, 2026</p>
           </div>
 

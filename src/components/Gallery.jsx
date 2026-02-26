@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const images = [1, 2, 3, 4,6].map(
+
+
+
+const images = [1, 2, 3, 4, 6, 7 , 8,5].map(
   (num) => `/assets/image-${num}.jpg`
 );
 

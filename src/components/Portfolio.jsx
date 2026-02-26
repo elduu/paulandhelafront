@@ -10,7 +10,7 @@ const Portfolio = () => {
                {/* <img src={`assets/imagecAL.jpg`} alt="portfolio" /> */}
             <img src={`assets/image-${num}.jpg`} alt="portfolio" />
             <div className="portfolio__content">
-              <button className="btn">PAUL AND HELA</button>
+              <button className="btn">PAUL AND HELLA</button>
             </div>
           </div>
         ))}

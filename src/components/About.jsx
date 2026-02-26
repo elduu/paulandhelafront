@@ -14,7 +14,7 @@ const About = () => {
       </p>  
       <p className="section__description">
        Together with our families, we joyfully invite you to celebrate our marriage on<strong>3 May  2026. </strong> 
-       The ceremony will be held at the <strong>Lideta Mekane Eyesus, </strong> 
+       The ceremony will be held at the <strong>BETHEL FULL GOSPEL CHURCH, </strong> 
 
       </p>
        <p className="section__description">

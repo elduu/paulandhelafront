@@ -30,7 +30,7 @@ export default function HeroSaveTheDate() {
                 textAnchor="middle"
                 className="handwriting-name"
               >
-                Hela
+                Hella
               </text>
             </svg>
           </div>
@@ -45,7 +45,7 @@ export default function HeroSaveTheDate() {
         </div>
 
         <p className="hero-date">MAY 3RD| AT 8:00 LTE</p>
-        <p className="hero-venue">AT LEDETA MEKANE EYESUS CHURCH</p>
+        <p className="hero-venue">AT BETHEL FULL GOSPEL CHURCH </p>
       </div>
     </section>
   );
