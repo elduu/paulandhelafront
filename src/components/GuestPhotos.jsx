@@ -5,6 +5,7 @@ const GuestPhotos = () => {
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     fetch("https://apiinv.newblossomequb.net/api/wedding-photos")
@@ -17,7 +18,8 @@ const GuestPhotos = () => {
         console.error(err);
         setLoading(false);
       });
-  }, []);
+  }, [])
+  ;
 
   const telegramBotLink = "https://t.me/PaulandHela_bot";
 
@@ -97,25 +99,40 @@ const GuestPhotos = () => {
         </p>
       ) : (
         <div className="guest__photos__grid">
-          {photos.map((photo) => (
-            <div key={photo.url} className="guest__photo__item">
-              <img
-                src={photo.url}
-                alt="Guest photo"
-                style={{
-                  width: "100%",
-                  height: "320px",
-                  objectFit: "cover",
-                  borderRadius: "12px",
-                }}
-              />
-              <p style={{ textAlign: "center", padding: "1rem", color: "#555" }}>
-                From <strong>@{photo.sender || "Guest"}</strong>
-                <br />
-                <small>{new Date(photo.timestamp).toLocaleDateString()}</small>
-              </p>
-            </div>
-          ))}
+          {photos.map((photo, index) => (
+  <div
+    key={`${photo.image_url}-${index}`}
+    className="guest__photo__item"
+  >
+    <img
+      src={photo.image_url}
+      alt="Guest photo"
+      style={{
+        width: "100%",
+        height: "320px",
+        objectFit: "cover",
+        borderRadius: "12px",
+      }}
+      onError={(e) => {
+        console.error("Image failed to load:", photo.image_url);
+      }}
+    />
+
+    <p
+      style={{
+        textAlign: "center",
+        padding: "1rem",
+        color: "#555",
+      }}
+    >
+      From <strong>@{photo.sender || "Guest"}</strong>
+      <br />
+      <small>
+        {new Date(photo.timestamp).toLocaleDateString()}
+      </small>
+    </p>
+  </div>
+))}
         </div>
       )}
     </section>
